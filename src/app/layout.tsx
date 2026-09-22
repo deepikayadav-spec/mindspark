@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
+import { Feedback } from "@/components/Feedback";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <footer className="mx-auto max-w-5xl px-5 py-10 text-center text-xs text-slate-400 dark:text-slate-600">
           Mindspark — an independent interactive-learning demo. Progress is stored in your browser only.
         </footer>
+        <Feedback />
       </body>
     </html>
   );
